@@ -20,4 +20,8 @@ defmodule Venom do
 
     Venom.Parser.parse_root!(data)
   end
+
+  def encode_nbt!(data) do
+    Venom.Encoder.encode!(data)
+  end
 end

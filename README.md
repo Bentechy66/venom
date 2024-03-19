@@ -1,11 +1,10 @@
 # Venom
 
-**TODO: Add description**
+**An [NBT](https://wiki.vg/NBT) decoder and encoder written in pure Elixir**
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `venom` to your list of dependencies in `mix.exs`:
+First, add Venom to your `mix.exs` dependencies:
 
 ```elixir
 def deps do
@@ -15,7 +14,20 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/venom>.
+Then, update your dependencies:
+
+```
+$ mix deps.get
+```
+
+## Usage
+
+```elixir
+iex> Venom.decode_nbt!(File.read!("hello_world.nbt"))
+      %{"hello world" => %{"name" => "Bananrama"}}
+
+iex> <<binary_nbt_data::binary>> = Venom.encode_nbt!(%{"hello world" => %{"name" => "Bananrama"}})
+```
+
+The docs can be found at <https://hexdocs.pm/venom>.
 

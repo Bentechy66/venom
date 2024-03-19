@@ -1,6 +1,7 @@
 defmodule VenomTest do
   use ExUnit.Case
   doctest Venom
+  doctest Venom.Parser
 
   test "Basic test" do
     assert Venom.decode_nbt!(File.read!(<<__DIR__, "/hello_world.nbt">>)) == %{"hello world" => %{"name" => "Bananrama"}}
