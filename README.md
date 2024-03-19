@@ -1,6 +1,6 @@
 # Venom
 
-**An [NBT](https://wiki.vg/NBT) decoder and encoder written in pure Elixir**
+**An [NBT](https://wiki.vg/NBT) decoder written in pure Elixir**
 
 ## Installation
 
@@ -25,9 +25,10 @@ $ mix deps.get
 ```elixir
 iex> Venom.decode_nbt!(File.read!("hello_world.nbt"))
       %{"hello world" => %{"name" => "Bananrama"}}
-
-iex> <<binary_nbt_data::binary>> = Venom.encode_nbt!(%{"hello world" => %{"name" => "Bananrama"}})
 ```
+
+## Coming Soon(?)
+ - Encoding support
 
 The docs can be found at <https://hexdocs.pm/venom>.
 

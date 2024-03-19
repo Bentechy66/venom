@@ -6,6 +6,8 @@ defmodule Venom do
   @doc """
   Decode a binary representing NBT data.
 
+  Also automatically gunzips any gzip-encoded NBT.
+
   ## Examples
 
       iex> Venom.decode_nbt!(<<10, 0, 11, 104, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100, 8, 0, 4, 110, 97, 109, 101, 0, 9, 66, 97, 110, 97, 110, 114, 97, 109, 97, 0>>)
@@ -19,9 +21,5 @@ defmodule Venom do
     end
 
     Venom.Parser.parse_root!(data)
-  end
-
-  def encode_nbt!(data) do
-    Venom.Encoder.encode!(data)
   end
 end

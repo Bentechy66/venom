@@ -6,7 +6,7 @@ defmodule Venom.MixProject do
       app: :venom,
       version: "0.1.0",
       elixir: "~> 1.16",
-      description: "An NBT decoder and encoder written in pure Elixir.",
+      description: "An NBT decoder written in pure Elixir.",
       package: package(),
       deps: deps(),
       docs: [extras: ["README.md"]],
